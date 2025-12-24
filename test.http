@@ -1,0 +1,45 @@
+### Получить информацию о сервере
+GET http://localhost:3000/
+
+### Health check
+GET http://localhost:3000/api/health
+
+### Получить все заметки
+GET http://localhost:3000/api/notes
+
+### Создать заметку
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+  "title": "Моя первая заметка",
+  "content": "Это содержание моей первой заметки"
+}
+
+### Создать вторую заметку
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+  "title": "Покупки",
+  "content": "Молоко, хлеб, яйца"
+}
+
+### Получить все заметки (после создания)
+GET http://localhost:3000/api/notes
+
+### Получить одну заметку (замени ID на реальный из ответа выше)
+GET http://localhost:3000/api/notes/note_1
+
+### Обновить заметку
+PUT http://localhost:3000/api/notes/note_1
+Content-Type: application/json
+
+{
+  "title": "Обновленный заголовок",
+  "content": "Обновленное содержание"
+}
+
+### Удалить заметку
+DELETE http://localhost:3000/api/notes/note_2
+
